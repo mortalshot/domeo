@@ -8149,7 +8149,7 @@
                     depth: 1
                 },
                 autoplay: {
-                    delay: 3e3,
+                    delay: 2500,
                     disableOnInteraction: false
                 },
                 pagination: {

@@ -847,8 +847,8 @@ video {
   z-index: 1
 }
 .guarantee .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
-  -webkit-animation: change-width 3.8s linear;
-  animation: change-width 3.8s linear
+  -webkit-animation: change-width 3.3s linear;
+  animation: change-width 3.3s linear
 }
 @-webkit-keyframes change-width {
   0% {
