@@ -359,6 +359,15 @@
     display: flex;
     justify-content: center;
 
+    @media (min-width: $mobile) {
+      transform: translateY(100%);
+      transition: 1s ease transform 0s;
+
+      ._show & {
+        transform: translateY(0);
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: toRem(18);
     }
@@ -371,6 +380,7 @@
   // .features__title
   &__title {
     font-weight: 500;
+    position: relative;
     @include adaptiveValue("font-size", 32, 25);
   }
 
@@ -394,8 +404,25 @@
   // .features__item
   &__item {
     padding: toRem(30) toRem(20);
+    transition: 1s ease all 0s;
     @include adaptiveValue("padding-top", 30, 25);
     @include adaptiveValue("padding-bottom", 30, 25);
+
+    @media (min-width: $mobile) {
+      &:first-child {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      &:last-child {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      ._show & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
     @media (max-width: $mobileM) {
       flex: 0 0 100%;
@@ -526,6 +553,17 @@
 
       &:not(.swiper-button-disabled) {
         cursor: pointer;
+
+        @media (any-hover: hover) {
+          transition: $transition ease background-color 0s;
+          &:hover {
+            background-color: #242424;
+          }
+        }
+      }
+
+      &.swiper-button-disabled {
+        cursor: not-allowed;
       }
 
       svg {

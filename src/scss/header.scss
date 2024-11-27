@@ -43,6 +43,7 @@
 				transition: 0.5s ease all 0s;
 				display: flex;
 				flex-direction: column;
+				background-color: $Black;
 
 				.menu-open & {
 					opacity: 1 !important;

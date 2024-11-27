@@ -15,6 +15,15 @@ textarea {
 	min-height: toRem(62);
 	overflow: hidden;
 	position: relative;
+	display: grid;
+	align-items: center;
+
+
+	&._focus {
+		.input {
+			font-size: toRem(20);
+		}
+	}
 
 	.form-label {
 		font-weight: 500;
@@ -39,11 +48,16 @@ textarea {
 		padding: 0;
 		font-size: toRem(15);
 		line-height: math.div(22, 15);
+		transition: $transition ease all 0s;
 	}
 
 	// .input-wrapper_white
 	&_white {
 		background-color: $mainColor;
+		
+		.input {
+			color: $Black;
+		}
 	}
 }
 

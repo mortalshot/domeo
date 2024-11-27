@@ -46,7 +46,8 @@ video {
   }
 }
 
-section, .section {
+section,
+.section {
   @include adaptiveValue("margin-top", 120, 70);
   @include adaptiveValue("margin-bottom", 120, 70);
 
@@ -247,6 +248,22 @@ section, .section {
         width: 0%;
       }
     }
+  }
+}
+
+.animation-swipe {
+  animation: slide-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes slide-right {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-150%);
+    opacity: 0;
   }
 }
 

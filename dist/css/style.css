@@ -77,9 +77,6 @@ input,
 textarea {
   width: 100%
 }
-label {
-  display: inline-block
-}
 button,
 option,
 select {
@@ -181,7 +178,12 @@ textarea {
   padding: .625rem 1.25rem;
   min-height: 3.875rem;
   overflow: hidden;
-  position: relative
+  position: relative;
+  display: grid;
+  align-items: center
+}
+.input-wrapper._focus .input {
+  font-size: 1.25rem
 }
 .input-wrapper .form-label {
   font-weight: 500;
@@ -203,10 +205,14 @@ textarea {
   min-height: initial;
   padding: 0;
   font-size: .9375rem;
-  line-height: 1.4666666667
+  line-height: 1.4666666667;
+  transition: .3s ease all 0s
 }
 .input-wrapper_white {
   background-color: #fff
+}
+.input-wrapper_white .input {
+  color: #000
 }
 .input {
   font-weight: 300;
@@ -567,6 +573,36 @@ video {
   width: 100%;
   opacity: 1
 }
+.animation-swipe {
+  -webkit-animation: slide-right 3s cubic-bezier(.25,.46,.45,.94) infinite;
+  animation: slide-right 3s cubic-bezier(.25,.46,.45,.94) infinite
+}
+@-webkit-keyframes slide-right {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+  }
+  50% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+    opacity: 0
+  }
+}
+@keyframes slide-right {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+  }
+  50% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+    opacity: 0
+  }
+}
 [data-src] {
   cursor: pointer
 }
@@ -874,7 +910,8 @@ video {
   margin-bottom: 1.125rem
 }
 .features__title {
-  font-weight: 500
+  font-weight: 500;
+  position: relative
 }
 .features__items {
   display: grid;
@@ -887,7 +924,8 @@ video {
   margin: -1.875rem -1.25rem
 }
 .features__item {
-  padding: 1.875rem 1.25rem
+  padding: 1.875rem 1.25rem;
+  transition: 1s ease all 0s
 }
 .feature__head {
   display: flex;
@@ -964,6 +1002,9 @@ video {
 }
 .socials__slider .swiper-arrow:not(.swiper-button-disabled) {
   cursor: pointer
+}
+.socials__slider .swiper-arrow.swiper-button-disabled {
+  cursor: not-allowed
 }
 .socials__slider .swiper-arrow svg {
   flex: 0 0 1.1875rem;
@@ -2134,6 +2175,30 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .guarantee__body {
     text-align: center
   }
+  .features__domeo {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: 1s ease transform 0s
+  }
+  ._show .features__domeo {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  .features__item:first-child {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%)
+  }
+  .features__item:last-child {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+  }
+  ._show .features__item {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
   .quiz__grid {
     display: grid;
     grid-template-columns: 1fr 33.5384615385%
@@ -2434,7 +2499,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     overflow-x: hidden;
     transition: .5s ease all 0s;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    background-color: #000
   }
   .menu-open .header__menu .menu__body {
     opacity: 1!important;
@@ -3008,6 +3074,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .cta__button:hover {
     opacity: .8
+  }
+  .socials__slider .swiper-arrow:not(.swiper-button-disabled) {
+    transition: .3s ease background-color 0s
+  }
+  .socials__slider .swiper-arrow:not(.swiper-button-disabled):hover {
+    background-color: #242424
   }
   .social-thumb:hover {
     background-color: rgba(67,67,67,.1);
