@@ -26,6 +26,8 @@
     max-width: toRem(630);
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 1;
     @include adaptiveValue("font-size", 20, 16);
 
     @media (max-width: $mobile) {

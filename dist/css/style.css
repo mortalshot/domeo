@@ -668,7 +668,9 @@ video {
   text-align: center;
   max-width: 39.375rem;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  position: relative;
+  z-index: 1
 }
 .firstscreen__cta {
   max-width: 37.5rem;
