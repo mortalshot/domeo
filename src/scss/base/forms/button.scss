@@ -1,0 +1,25 @@
+//<BUTTONS (a.btn+tab)>
+// Сниппет (HTML): btn
+
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: toRem(6);
+	text-align: center;
+	border: toRem(1) solid transparent;
+	min-height: toRem(55);
+	padding: toRem(18) toRem(32);
+	position: relative;
+	overflow: hidden;
+	font-weight: 600;
+	font-size: toRem(16);
+	line-height: 120%;
+	border-radius: toRem(2);
+
+	// .btn_bg-yellow
+	&_bg-yellow {
+		color: $Black;
+		background-color: $Yellow;
+	}
+}

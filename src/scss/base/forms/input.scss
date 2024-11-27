@@ -1,0 +1,76 @@
+//<INPUT>
+// Сниппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.input-wrapper {
+	border-radius: toRem(31);
+	padding: toRem(10) toRem(20);
+	min-height: toRem(62);
+	overflow: hidden;
+	position: relative;
+
+	.form-label {
+		font-weight: 500;
+		font-size: toRem(12);
+		line-height: math.div(20, 12);
+		color: rgba($color: #000000, $alpha: 0.6);
+
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	.input {
+		border: 0;
+		min-height: initial;
+		padding: 0;
+		font-size: toRem(15);
+		line-height: math.div(22, 15);
+	}
+
+	// .input-wrapper_white
+	&_white {
+		background-color: $mainColor;
+	}
+}
+
+.input {
+	font-weight: 300;
+	font-size: toRem(20);
+	line-height: math.div(28, 20);
+	border-radius: toRem(4) !important;
+	width: 100%;
+	display: block;
+	padding: toRem(18) toRem(16);
+	border: 1px solid $Gray2;
+	min-height: toRem(67);
+	caret-color: inherit;
+	outline: 0;
+}
+
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
