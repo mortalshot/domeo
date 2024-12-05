@@ -2196,6 +2196,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-transform: translateX(100%);
     transform: translateX(100%)
   }
+  .features__item:nth-child(3n-1) {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0
+  }
   ._show .features__item {
     opacity: 1;
     -webkit-transform: translateX(0);

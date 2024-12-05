@@ -419,6 +419,10 @@
         opacity: 0;
         transform: translateX(100%);
       }
+      &:nth-child(3n-1) {
+        transform: translateY(50%);
+        opacity: 0;
+      }
 
       ._show & {
         opacity: 1;
