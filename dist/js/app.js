@@ -9988,6 +9988,8 @@ PERFORMANCE OF THIS SOFTWARE.
             modules_flsModules.gallery = galleyItems;
         }
         document.addEventListener("DOMContentLoaded", (function() {
+            const ctaButton = document.querySelector(".cta__button");
+            if (ctaButton) ctaButton.classList.add("_active");
             const steps = document.querySelectorAll(".quiz__step");
             if (steps.length > 0) {
                 const discountValue = document.querySelector(".quiz__discount-value span");

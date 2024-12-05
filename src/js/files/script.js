@@ -5,6 +5,11 @@ import { flsModules } from "./modules.js";
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  const ctaButton = document.querySelector('.cta__button');
+  if (ctaButton) {
+    ctaButton.classList.add('_active');
+  }
+
   // Работа с квизом
   const steps = document.querySelectorAll('.quiz__step');
   if (steps.length > 0) {
