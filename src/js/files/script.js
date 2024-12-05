@@ -7,7 +7,9 @@ import { flsModules } from "./modules.js";
 document.addEventListener('DOMContentLoaded', function () {
   const ctaButton = document.querySelector('.cta__button');
   if (ctaButton) {
-    ctaButton.classList.add('_active');
+    setTimeout(() => {
+      ctaButton.classList.add('_active');
+    }, 300);
   }
 
   // Работа с квизом

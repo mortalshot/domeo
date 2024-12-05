@@ -8143,6 +8143,7 @@
                 speed: 800,
                 loop: true,
                 direction: "vertical",
+                simulateTouch: false,
                 effect: "coverflow",
                 coverflowEffect: {
                     scale: .8,
@@ -9989,7 +9990,9 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         document.addEventListener("DOMContentLoaded", (function() {
             const ctaButton = document.querySelector(".cta__button");
-            if (ctaButton) ctaButton.classList.add("_active");
+            if (ctaButton) setTimeout((() => {
+                ctaButton.classList.add("_active");
+            }), 300);
             const steps = document.querySelectorAll(".quiz__step");
             if (steps.length > 0) {
                 const discountValue = document.querySelector(".quiz__discount-value span");

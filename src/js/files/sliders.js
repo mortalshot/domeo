@@ -35,7 +35,7 @@ function initSliders() {
 			speed: 800,
 			loop: true,
 			direction: 'vertical',
-
+			simulateTouch: false,
 
 			// Эффекты
 			effect: 'coverflow',
