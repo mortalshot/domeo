@@ -1009,8 +1009,8 @@ video {
   cursor: not-allowed
 }
 .socials__slider .swiper-arrow svg {
-  flex: 0 0 1.1875rem;
-  width: 1.1875rem;
+  flex: 0 0 .75rem;
+  width: .75rem;
   height: 1rem
 }
 .socials__slider .swiper-arrow_prev {
@@ -2403,12 +2403,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .socials__slider .swiper-arrow {
     top: 3.1875rem
   }
-  .socials__slider .swiper-arrow svg {
-    flex-basis: 1.1875rem
-  }
-  .socials__slider .swiper-arrow svg {
-    width: 1.1875rem
-  }
   .quiz__text {
     font-size: .875rem
   }
@@ -2751,12 +2745,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .socials__slider .swiper-arrow {
     top: 1.625rem
   }
-  .socials__slider .swiper-arrow svg {
-    flex-basis: .75rem
-  }
-  .socials__slider .swiper-arrow svg {
-    width: .75rem
-  }
   .awards-item {
     padding-top: 1.25rem
   }
@@ -2983,12 +2971,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .socials__slider .swiper-arrow {
     top: clamp(1.625rem ,.1340648855rem + 6.3613231552vw ,3.1875rem)
-  }
-  .socials__slider .swiper-arrow svg {
-    flex-basis: clamp(.75rem ,.3325381679rem + 1.7811704835vw ,1.1875rem)
-  }
-  .socials__slider .swiper-arrow svg {
-    width: clamp(.75rem ,.3325381679rem + 1.7811704835vw ,1.1875rem)
   }
   .quiz__text {
     font-size: clamp(.75rem ,.6307251908rem + .5089058524vw ,.875rem)

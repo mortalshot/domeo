@@ -569,11 +569,9 @@
       }
 
       svg {
-        flex: 0 0 toRem(19);
-        width: toRem(19);
+        flex: 0 0 toRem(12);
+        width: toRem(12);
         height: toRem(16);
-        @include adaptiveValue("flex-basis", 19, 12, 0, 768, 375);
-        @include adaptiveValue("width", 19, 12, 0, 768, 375);
       }
 
       // .swiper-arrow_prev
