@@ -366,7 +366,9 @@ body::after {
   transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
   background-color: #fff;
   width: 100%;
-  max-width: 60.9375rem
+  max-width: 60.9375rem;
+  border-radius: .375rem;
+  overflow: hidden
 }
 .lock .popup__content {
   visibility: visible
@@ -2197,8 +2199,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     transform: translateX(100%)
   }
   .features__item:nth-child(3n-1) {
-    -webkit-transform: translateY(50%);
-    transform: translateY(50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     opacity: 0
   }
   ._show .features__item {

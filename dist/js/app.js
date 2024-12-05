@@ -8143,7 +8143,7 @@
                 speed: 800,
                 loop: true,
                 direction: "vertical",
-                simulateTouch: false,
+                allowTouchMove: false,
                 effect: "coverflow",
                 coverflowEffect: {
                     scale: .8,

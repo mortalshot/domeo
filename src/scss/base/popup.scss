@@ -47,6 +47,8 @@ body::after {
 		background-color: $mainColor;
 		width: 100%;
 		max-width: toRem(975);
+		border-radius: toRem(6);
+		overflow: hidden;
 
 		.lock & {
 			visibility: visible;
