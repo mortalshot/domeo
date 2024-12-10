@@ -27,7 +27,7 @@ body {
 }
 body {
 	color: $mainColor;
-	font-family: $fontFamily;
+	font-family: $fontFamily, sans-serif;
 	font-weight: 300;
 	font-size: $fontSize;
 	line-height: math.div(18 , 14);

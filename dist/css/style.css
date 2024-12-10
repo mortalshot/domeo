@@ -54,7 +54,7 @@ html {
 }
 body {
   color: #fff;
-  font-family: MuseoSansCyrl;
+  font-family: MuseoSansCyrl,sans-serif;
   font-weight: 300;
   font-size: .875rem;
   line-height: 1.2857142857;
