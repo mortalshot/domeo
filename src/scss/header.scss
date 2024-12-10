@@ -40,10 +40,12 @@
 				padding-bottom: toRem(50);
 				overflow-y: auto;
 				overflow-x: hidden;
-				transition: 0.5s ease all 0s;
 				display: flex;
 				flex-direction: column;
 				background-color: $Black;
+				transition:
+					0.5s ease opacity,
+					0.5s visibility 0s;
 
 				.menu-open & {
 					opacity: 1 !important;

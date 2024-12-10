@@ -103,7 +103,7 @@ h6 {
   font-size: inherit
 }
 body {
-  transition: .5s ease opacity 0s
+  transition: .3s ease opacity 0s
 }
 .lock body {
   overflow: hidden;
@@ -1107,7 +1107,9 @@ video {
 .awards__slide {
   -webkit-transform: scale(.86);
   transform: scale(.86);
-  opacity: .3;
+  opacity: .3
+}
+.awards__slide.swiper-initialized {
   transition: .6s ease all 0s
 }
 .awards__slide.swiper-slide-active {
@@ -2500,10 +2502,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-bottom: 3.125rem;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: .5s ease all 0s;
     display: flex;
     flex-direction: column;
-    background-color: #000
+    background-color: #000;
+    transition: .5s ease opacity,.5s visibility 0s
   }
   .menu-open .header__menu .menu__body {
     opacity: 1!important;
