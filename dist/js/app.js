@@ -10067,6 +10067,11 @@ PERFORMANCE OF THIS SOFTWARE.
                         _slideUp(itemLabel);
                     }));
                     itemInput.addEventListener("blur", (function() {
+                        if (isMobile.any() && bodyLockStatus) {
+                            bodyLock();
+                            document.documentElement.classList.add("menu-open");
+                            console.log("qweqwe");
+                        }
                         item.classList.remove("_focus");
                         _slideDown(itemLabel);
                     }));
@@ -10089,13 +10094,6 @@ PERFORMANCE OF THIS SOFTWARE.
                 };
                 const observer = new IntersectionObserver(observerCallback, observerOptions);
                 observer.observe(featuresContainer);
-            }
-        }));
-        document.addEventListener("click", (function(e) {
-            const targetElement = e.target;
-            if (isMobile.any() && bodyLockStatus && targetElement.closest(".input-wrapper")) {
-                bodyLock();
-                document.documentElement.classList.add("menu-open");
             }
         }));
         window["FLS"] = true;

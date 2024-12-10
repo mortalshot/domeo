@@ -74,6 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
           _slideUp(itemLabel);
         });
         itemInput.addEventListener("blur", function () {
+          if (isMobile.any() && bodyLockStatus) {
+            bodyLock();
+            document.documentElement.classList.add("menu-open");
+            console.log('qweqwe');
+          }
+
           item.classList.remove('_focus');
           _slideDown(itemLabel);
         });
@@ -106,11 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-document.addEventListener('click', function (e) {
+/* document.addEventListener('click', function (e) {
   const targetElement = e.target;
-
-  if (isMobile.any() && bodyLockStatus && targetElement.closest('.input-wrapper')) {
-    bodyLock();
-    document.documentElement.classList.add("menu-open");
-  }
-})
+}) */
