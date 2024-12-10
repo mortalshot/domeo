@@ -1,5 +1,5 @@
 // Подключение функционала "Чертоги Фрилансера"
-import { _slideUp, _slideDown } from "./functions.js";
+import { _slideUp, _slideDown, bodyLockStatus, bodyLock, isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -105,3 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(featuresContainer);
   }
 });
+
+document.addEventListener('click', function (e) {
+  const targetElement = e.target;
+
+  if (isMobile.any() && bodyLockStatus && targetElement.closest('.input-wrapper')) {
+    bodyLock();
+    document.documentElement.classList.add("menu-open");
+  }
+})

@@ -3776,6 +3776,26 @@
     (() => {
         "use strict";
         const modules_flsModules = {};
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
         function addLoadedClass() {
             if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
                 setTimeout((function() {
@@ -10069,6 +10089,13 @@ PERFORMANCE OF THIS SOFTWARE.
                 };
                 const observer = new IntersectionObserver(observerCallback, observerOptions);
                 observer.observe(featuresContainer);
+            }
+        }));
+        document.addEventListener("click", (function(e) {
+            const targetElement = e.target;
+            if (isMobile.any() && bodyLockStatus && targetElement.closest(".input-wrapper")) {
+                bodyLock();
+                document.documentElement.classList.add("menu-open");
             }
         }));
         window["FLS"] = true;
