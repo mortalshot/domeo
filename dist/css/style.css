@@ -1109,7 +1109,7 @@ video {
   transform: scale(.86);
   opacity: .3
 }
-.awards__slide.swiper-initialized {
+.swiper-initialized .awards__slide {
   transition: .6s ease all 0s
 }
 .awards__slide.swiper-slide-active {
