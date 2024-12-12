@@ -10045,13 +10045,6 @@ PERFORMANCE OF THIS SOFTWARE.
                     itemInput.addEventListener("focus", (function() {
                         item.classList.add("_focus");
                         _slideUp(itemLabel);
-                        setTimeout((() => {
-                            window.scrollTo({
-                                top: 0,
-                                behavior: "smooth"
-                            });
-                            bodyLock();
-                        }), 300);
                     }));
                     itemInput.addEventListener("blur", (function() {
                         item.classList.remove("_focus");
