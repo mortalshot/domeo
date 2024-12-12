@@ -10046,6 +10046,10 @@ PERFORMANCE OF THIS SOFTWARE.
                         item.classList.add("_focus");
                         _slideUp(itemLabel);
                         setTimeout((() => {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
                             bodyLock();
                         }), 300);
                     }));
@@ -10053,6 +10057,10 @@ PERFORMANCE OF THIS SOFTWARE.
                         item.classList.remove("_focus");
                         _slideDown(itemLabel);
                         setTimeout((() => {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
                             bodyLock();
                         }), 300);
                     }));

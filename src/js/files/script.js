@@ -74,6 +74,10 @@ document.addEventListener('DOMContentLoaded', function () {
           _slideUp(itemLabel);
 
           setTimeout(() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth' // Плавный скролл
+            });
             bodyLock();
           }, 300);
         });
@@ -82,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
           _slideDown(itemLabel);
 
           setTimeout(() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth' // Плавный скролл
+            });
             bodyLock();
           }, 300);
         });
