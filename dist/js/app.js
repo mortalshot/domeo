@@ -10067,11 +10067,11 @@ PERFORMANCE OF THIS SOFTWARE.
                         _slideUp(itemLabel);
                     }));
                     itemInput.addEventListener("blur", (function() {
-                        if (isMobile.any() && bodyLockStatus) {
+                        if (isMobile.any()) setTimeout((() => {
                             bodyLock();
                             document.documentElement.classList.add("menu-open");
                             console.log("qweqwe");
-                        }
+                        }), 100);
                         item.classList.remove("_focus");
                         _slideDown(itemLabel);
                     }));
