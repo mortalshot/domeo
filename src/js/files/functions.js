@@ -433,6 +433,7 @@ export function menuOpen() {
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
+	alert("menu close");
 }
 // Модуль "показать еще" ============================================= ================================================== ================================================== ================================================== ====================
 export function showMore() {
