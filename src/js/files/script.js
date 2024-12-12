@@ -71,19 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         itemInput.addEventListener("focus", function () {
           item.classList.add('_focus');
+          bodyLock();
           _slideUp(itemLabel);
         });
         itemInput.addEventListener("blur", function () {
-          if (isMobile.any()) {
-            setTimeout(() => {
-              bodyLock();
-              document.documentElement.classList.add("menu-open");
-              console.log('qweqwe');
-            }, 100);
-          }
-
           item.classList.remove('_focus');
           _slideDown(itemLabel);
+          bodyLock();
         });
       }
     });

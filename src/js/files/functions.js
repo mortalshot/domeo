@@ -131,6 +131,8 @@ export let bodyLockToggle = (delay = 500) => {
 export let bodyUnlock = (delay = 500) => {
 	if (bodyLockStatus) {
 		const lockPaddingElements = document.querySelectorAll("[data-lp]");
+		alert('qwe');
+
 		setTimeout(() => {
 			lockPaddingElements.forEach(lockPaddingElement => {
 				lockPaddingElement.style.paddingRight = ''
@@ -433,7 +435,6 @@ export function menuOpen() {
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
-	alert("menu close");
 }
 // Модуль "показать еще" ============================================= ================================================== ================================================== ================================================== ====================
 export function showMore() {

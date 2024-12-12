@@ -3776,26 +3776,6 @@
     (() => {
         "use strict";
         const modules_flsModules = {};
-        let isMobile = {
-            Android: function() {
-                return navigator.userAgent.match(/Android/i);
-            },
-            BlackBerry: function() {
-                return navigator.userAgent.match(/BlackBerry/i);
-            },
-            iOS: function() {
-                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-            },
-            Opera: function() {
-                return navigator.userAgent.match(/Opera Mini/i);
-            },
-            Windows: function() {
-                return navigator.userAgent.match(/IEMobile/i);
-            },
-            any: function() {
-                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-            }
-        };
         function addLoadedClass() {
             if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
                 setTimeout((function() {
@@ -3876,6 +3856,7 @@
         let bodyUnlock = (delay = 500) => {
             if (bodyLockStatus) {
                 const lockPaddingElements = document.querySelectorAll("[data-lp]");
+                alert("qwe");
                 setTimeout((() => {
                     lockPaddingElements.forEach((lockPaddingElement => {
                         lockPaddingElement.style.paddingRight = "";
@@ -10064,16 +10045,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     const itemInput = item.querySelector(".input");
                     itemInput.addEventListener("focus", (function() {
                         item.classList.add("_focus");
+                        bodyLock();
                         _slideUp(itemLabel);
                     }));
                     itemInput.addEventListener("blur", (function() {
-                        if (isMobile.any()) setTimeout((() => {
-                            bodyLock();
-                            document.documentElement.classList.add("menu-open");
-                            console.log("qweqwe");
-                        }), 100);
                         item.classList.remove("_focus");
                         _slideDown(itemLabel);
+                        bodyLock();
                     }));
                 }
             }));
