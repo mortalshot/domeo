@@ -2510,8 +2510,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .menu-open .header__menu .menu__body {
     opacity: 1!important;
     visibility: visible;
-    pointer-events: all;
-    z-index: 200
+    pointer-events: all
   }
   .header__menu .menu__body > ul {
     flex: 1

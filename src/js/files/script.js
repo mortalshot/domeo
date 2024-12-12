@@ -76,14 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
         itemInput.addEventListener("blur", function () {
           item.classList.remove('_focus');
           _slideDown(itemLabel);
-
-          setTimeout(() => {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth' // Плавный скролл
-            });
-            bodyLock();
-          }, 505);
         });
       }
     });
@@ -113,7 +105,3 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(featuresContainer);
   }
 });
-
-/* document.addEventListener('click', function (e) {
-  const targetElement = e.target;
-}) */
