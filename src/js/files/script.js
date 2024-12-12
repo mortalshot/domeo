@@ -71,13 +71,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         itemInput.addEventListener("focus", function () {
           item.classList.add('_focus');
-          bodyLock();
           _slideUp(itemLabel);
+
+          setTimeout(() => {
+            bodyLock();
+          }, 300);
         });
         itemInput.addEventListener("blur", function () {
           item.classList.remove('_focus');
           _slideDown(itemLabel);
-          bodyLock();
+
+          setTimeout(() => {
+            bodyLock();
+          }, 300);
         });
       }
     });

@@ -3856,7 +3856,6 @@
         let bodyUnlock = (delay = 500) => {
             if (bodyLockStatus) {
                 const lockPaddingElements = document.querySelectorAll("[data-lp]");
-                alert("qwe");
                 setTimeout((() => {
                     lockPaddingElements.forEach((lockPaddingElement => {
                         lockPaddingElement.style.paddingRight = "";
@@ -10045,13 +10044,17 @@ PERFORMANCE OF THIS SOFTWARE.
                     const itemInput = item.querySelector(".input");
                     itemInput.addEventListener("focus", (function() {
                         item.classList.add("_focus");
-                        bodyLock();
                         _slideUp(itemLabel);
+                        setTimeout((() => {
+                            bodyLock();
+                        }), 300);
                     }));
                     itemInput.addEventListener("blur", (function() {
                         item.classList.remove("_focus");
                         _slideDown(itemLabel);
-                        bodyLock();
+                        setTimeout((() => {
+                            bodyLock();
+                        }), 300);
                     }));
                 }
             }));

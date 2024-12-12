@@ -131,7 +131,6 @@ export let bodyLockToggle = (delay = 500) => {
 export let bodyUnlock = (delay = 500) => {
 	if (bodyLockStatus) {
 		const lockPaddingElements = document.querySelectorAll("[data-lp]");
-		alert('qwe');
 
 		setTimeout(() => {
 			lockPaddingElements.forEach(lockPaddingElement => {
