@@ -1107,10 +1107,10 @@ video {
 .awards__slide {
   -webkit-transform: scale(.86);
   transform: scale(.86);
-  opacity: .3
-}
-.swiper-initialized .awards__slide {
-  transition: .6s ease all 0s
+  opacity: .3;
+  transition: .6s ease opacity,.6s -webkit-transform 0s;
+  transition: .6s ease opacity,.6s transform 0s;
+  transition: .6s ease opacity,.6s transform 0s,.6s -webkit-transform 0s
 }
 .awards__slide.swiper-slide-active {
   opacity: 1;
@@ -2491,7 +2491,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     bottom: 0;
     left: 0;
     right: 0;
-    max-height: 100vh;
+    max-height: 100svh;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

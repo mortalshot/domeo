@@ -744,10 +744,7 @@
   &__slide {
     transform: scale(0.86);
     opacity: 0.3;
-
-    .swiper-initialized & {
-      transition: 0.6s ease all 0s;
-    }
+    transition: 0.6s ease opacity, 0.6s transform 0s;
 
     &.swiper-slide-active {
       opacity: 1;
