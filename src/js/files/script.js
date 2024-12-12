@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
               behavior: 'smooth' // Плавный скролл
             });
             bodyLock();
-          }, 300);
+          }, 505);
         });
       }
     });

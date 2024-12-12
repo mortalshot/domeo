@@ -10055,7 +10055,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                 behavior: "smooth"
                             });
                             bodyLock();
-                        }), 300);
+                        }), 505);
                     }));
                 }
             }));
