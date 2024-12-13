@@ -102,17 +102,11 @@ h6 {
   font-weight: inherit;
   font-size: inherit
 }
-body {
-  transition: .3s ease opacity 0s
-}
 .lock body {
   overflow: hidden;
   touch-action: none;
   -ms-scroll-chaining: none;
   overscroll-behavior: none
-}
-.loaded body {
-  opacity: 1
 }
 .wrapper {
   min-height: 100%;
